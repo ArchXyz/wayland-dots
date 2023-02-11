@@ -1,16 +1,19 @@
 #!/usr/bin/bash
 echo " ##################################################################"
-echo " ############### Clone My dots From Github ########################"
+echo " #############   The Environment Is Ready  ########################"
 echo " ##################################################################"
 rm -rf ~/.config 2> /dev/null
 mkdir -p ~/{.config,.local}
-cd ~/.local/ && git clone https://github.com/archxyz/wayland-dots.git
+# Move All Dotfiles in $HOME/.local/
+mv ../../wayland-dots ~/.local
 
 echo "##############################"
 echo "### Link My Dots Config ######"
 echo "##############################"
 # Pictures
 ln -sf ~/.local/wayland-dots/sway-dotfiles/pix ~/
+# Git
+ln -sf ~/.local/wayland-dots/sway-dotfiles/git/.gitconfig ~/
 # bash
 ln -sf ~/.local/wayland-dots/sway-dotfiles/bsh/.bashrc ~/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/bsh/.bash_profile ~/
