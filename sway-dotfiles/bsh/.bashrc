@@ -56,7 +56,7 @@ alias h='history'
 alias n='clear && neofetch'
 alias c='clear'
 alias cc='clear'
-alias ss='sxiv -b -t *'
+alias ss='imv -b 11121D'
 
 ## Drive
 alias nm='nemo'

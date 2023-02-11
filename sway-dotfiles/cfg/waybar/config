@@ -1,8 +1,10 @@
 {
-    "height": 40, // Waybar height (to be removed for auto height)
-    "modules-left": ["custom/launcher", "sway/workspaces"],
+    "height": 37,
+    "spacing": 4,
+    "position": "top",
+    "modules-left": ["custom/launcher", "sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "network", "tray"],
+    "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray"],
 
     // Modules configuration
      "sway/workspaces": {
@@ -63,14 +65,6 @@
         "format-plugged": " ",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
-    },
-    "network": {
-        "format-wifi": "直 ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr}  ",
-        "format-linked": "{ifname} (No IP)  ",
-        "format-disconnected": "睊 ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "tooltip-format": "{essid} {signalStrength}%"
     },
     "pulseaudio": {
         "format": "{icon} {volume}% {format_source}",
