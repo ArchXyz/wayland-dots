@@ -1,8 +1,8 @@
 {
-    "height": 37, // Waybar height (to be removed for auto height)
-    "modules-left": ["sway/workspaces", "custom/media"],
+    "height": 40, // Waybar height (to be removed for auto height)
+    "modules-left": ["custom/launcher", "sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "sway/language", "pulseaudio", "backlight", "battery", "network", "tray"],
+    "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "network", "tray"],
 
     // Modules configuration
      "sway/workspaces": {
@@ -29,7 +29,7 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "sway/language": {
-        "format": "{short} ⠀⠀"
+        "format": "⠀ {short}⠀"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -43,26 +43,14 @@
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"format": "{:%H:%M}  ",
-	"format-alt": "{:%A, %B %d, %Y}  "
-    },
-    "cpu": {
-        "format": "{usage}%  ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}%  "
-    },
-    "temperature": {
-        "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": [" ", " ", " "]
+         "format": "{:%H:%M}  ",
+         "format-alt": "{:%A, %B %d, %Y}  "
     },
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": [" ", " "],
-        "on-scroll-up": "light -A 1",
-        "on-scroll-down": "light -U 1"
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
     },
     "battery": {
         "states": {
@@ -103,6 +91,19 @@
         "tooltip-format": "{desc}, {volume}%",
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-        "on-click-middle": "pavucontrol"
+        "on-click-middle": "foot sh -c pulsemixer"
     },
-}
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "fuzzel -P 50 -w 60 -b 11121Dff -t d8dee9ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m b48eadff --terminal=foot --icon-theme=Papirus -f 'JetBrains Mono Nerd Font:weight=Bold:size=10'",
+        "on-click-right": "killall fuzzel"
+    },
+    "custom/pacman": {
+        "format": "   {}",
+        "interval": 3600,
+        "exec": "checkupdates | wc -l",
+        "exec-if": "exit 0",
+        "on-click": "foot sh -c 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
+        "signal": 8
+    },
+},

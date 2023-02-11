@@ -1,6 +1,6 @@
 * {
   border: none;
-  font-family: JetBrains Mono Nerd Font, sans-serif;
+  font-family: "JetBrains Mono Nerd Font", sans-serif;
   font-size: 15px;
 }
 
@@ -32,6 +32,8 @@ window#waybar.hidden {
 #backlight,
 #battery,
 #network,
+#custom-pacman,
+#custom-launcher,
 #tray {
   background-color: #1e222a;
   padding: 0 10px;
@@ -59,31 +61,6 @@ window#waybar.hidden {
   color: #e06c75;
 }
 
-#cpu {
-  color: #61afef;
-}
-
-#memory {
-  color: #c678dd;
-}
-
-#temperature {
-  color: #d19a66;
-}
-
-#temperature.critical {
-  background-color: #e06c75;
-  color: #1e222a;
-}
-
-#custom-media {
-  background-color: #c678dd;
-  color: #1e222a;
-}
-
-#custom-fans {
-  color: #98c379;
-}
 
 #clock {
   color: #61afef;
@@ -99,11 +76,11 @@ window#waybar.hidden {
 }
 
 #language {
-  color: #56b6c2;
+  color: #cba6f7;
 }
 
 #pulseaudio {
-  color: #d19a66;
+  color: #fab387;
 }
 
 #pulseaudio.muted {
@@ -112,7 +89,7 @@ window#waybar.hidden {
 }
 
 #backlight {
-  color: #61afef;
+  color: #94e2d5;
 }
 
 #battery {
@@ -148,4 +125,13 @@ window#waybar.hidden {
 #network.disconnected {
     background-color: #e06c75;
     color: #1e222a;
+}
+
+#custom-launcher {
+	font-size: 20px;
+  color: #89DCEB;
+}
+
+#custom-pacman {
+  color: #f38ba8;
 }
