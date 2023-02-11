@@ -74,6 +74,9 @@ alias install_grub='sudo grub-install --target=x86_64-efi --efi-directory=/boot 
 alias update_grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'	# After Update Linux Karnel
 
 ## alias for configs
+alias swayc="nvim ~/.config/sway/config"
+alias waybarc="nvim ~/.config/waybar/config"
+alias footc="nvim ~/.config/foot/foot.ini"
 alias qtilec="nvim ~/.config/qtile/config.py"
 alias fishc="nvim ~/.config/fish/config.fish"
 alias xmonadc="nvim ~/.config/xmonad/xmonad.hs"

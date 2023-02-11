@@ -5,11 +5,11 @@ config.load_autoconfig(True)
 #############       Font        ############
 ############################################
 c.fonts.default_size = '10pt'
-c.fonts.default_family = "FiraCode Nerd Font Mono"
-c.fonts.completion.entry = '10pt "FiraCode Nerd Font Mono"'
-c.fonts.debug_console = '10pt "FiraCode Nerd Font Mono"'
+c.fonts.default_family = "JetBrains Mono Nerd Font"
+c.fonts.completion.entry = '10pt "JetBrains Mono Nerd Font"'
+c.fonts.debug_console = '10pt "JetBrains Mono Nerd Font"'
 c.fonts.prompts = 'default_size sans-serif'
-c.fonts.statusbar = '10pt "FiraCode Nerd Font Mono"'
+c.fonts.statusbar = '10pt "JetBrains Mono Nerd Font"'
 
 ############################################
 #############      statusbar    ############
