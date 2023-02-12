@@ -80,7 +80,7 @@
         gsettings set $gnome-schema gtk-theme 'Arc-Dark'
         gsettings set $gnome-schema icon-theme 'Papirus-Dark'
         gsettings set $gnome-schema cursor-theme 'Catppuccin-cursor'
-        gsettings set $gnome-schema font-name 'JetBrains Mono 10'
+        gsettings set $gnome-schema font-name 'JetBrains Mono Nerd Font 10'
     }
 
 #--------------------#
@@ -165,7 +165,8 @@
 
     # Sway session: --
     bindsym $mod+Control+r reload
-    bindsym $mod+Control+q exec swaynag -t warning -m 'End Wayland session?' -b 'Yes.' 'swaymsg exit'
+    bindsym $mod+Control+q exec swaynag -t warning -m 'End Wayland session ?' -b ' Yes ' 'swaymsg exit' --font 'JetBrains Mono Nerd Font' \
+    --background=#11121D --text=#f38ba8   --button-background=#94e2d5 --button-border=#11121D --border-bottom=#11121D
     bindsym $mod+Control+e exec wlogout
     bindsym $mod+Shift+x exec swaylock -f -c 000000
     bindsym $mod+Shift+c kill
@@ -338,6 +339,24 @@ mode "resize" {
     bindsym $mod+Ctrl+Up            resize grow   height 5 px or 5 ppt
     bindsym $mod+Ctrl+Down          resize shrink height 5 px or 5 ppt
     bindsym $mod+Ctrl+Right         resize grow   width  5 px or 5 ppt
+
+#------------#
+# exit mode: #
+#------------#
+set $exit "exit: [s]leep, [p]oweroff, [r]eboot, [l]ogout"
+mode $exit {
+    bindsym --to-code {
+        s exec systemctl suspend, mode "default"
+        p exec systemctl poweroff
+        r exec systemctl reboot
+        l exec swaymsg exit
+
+        Return mode "default"
+        Escape mode "default"
+        $mod+Control+x mode "default"
+    }
+}
+bindsym --to-code $mod+Control+x mode $exit
 
 #------------
 #-- Panel: --

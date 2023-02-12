@@ -24,6 +24,8 @@ ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/foot ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/mako ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/nvim ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/qutebrowser ~/.config/
+ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/neofetch ~/.config/
+ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/gtk-3.0 ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/user-dirs.dirs ~/.config/
 
 echo " ########################### "

@@ -4,7 +4,7 @@
     "position": "top",
     "modules-left": ["custom/launcher", "sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray"],
+    "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray", "custom/power"],
 
     // Modules configuration
      "sway/workspaces": {
@@ -99,5 +99,16 @@
         "exec-if": "exit 0",
         "on-click": "foot sh -c 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
         "signal": 8
+    },
+"custom/power": {
+      "format": "  {}",
+      "on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Shutdown'  'shutdown -h now' -b 'Restart' 'shutdown -r now' -b 'Logout' 'swaymsg exit' -b 'Hibernate' 'systemctl hibernate' --background=#11121D --text=#f38ba8   --button-background=#94e2d5 --button-border=#11121D --border-bottom=#11121D --font='jetBrains Mono Nerd Font'"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
     },
 },

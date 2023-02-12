@@ -26,6 +26,7 @@ window#waybar.hidden {
 #battery,
 #custom-pacman,
 #custom-launcher,
+#custom-power,
 #tray {
   background-color: #1e1e2e;
   padding: 0 10px;
@@ -51,6 +52,10 @@ window#waybar.hidden {
 
 #workspaces button.urgent {
   color: #e06c75;
+}
+#mode{
+  background-color:#94e2d5;
+  color:#11111b;
 }
 
 
@@ -117,4 +122,8 @@ window#waybar.hidden {
 
 #custom-pacman {
   color: #f38ba8;
+}
+#custom-power{
+  color:#f38ba8;
+  background-color: #1e1e2e
 }
