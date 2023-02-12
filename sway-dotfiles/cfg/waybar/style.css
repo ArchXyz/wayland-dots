@@ -54,7 +54,7 @@ window#waybar.hidden {
   color: #e06c75;
 }
 #mode{
-  background-color:#94e2d5;
+  background-color:#f38ba8;
   color:#11111b;
 }
 
@@ -121,7 +121,7 @@ window#waybar.hidden {
 }
 
 #custom-pacman {
-  color: #f38ba8;
+  color: #f9e2af
 }
 #custom-power{
   color:#f38ba8;

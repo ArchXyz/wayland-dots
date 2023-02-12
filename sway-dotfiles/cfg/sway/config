@@ -166,7 +166,7 @@
     # Sway session: --
     bindsym $mod+Control+r reload
     bindsym $mod+Control+q exec swaynag -t warning -m 'End Wayland session ?' -b ' Yes ' 'swaymsg exit' --font 'JetBrains Mono Nerd Font' \
-    --background=#11121D --text=#f38ba8   --button-background=#94e2d5 --button-border=#11121D --border-bottom=#11121D
+    --background=#11121D --text=#f38ba8   --button-background=#f38ba8 --button-border=#11121D --border-bottom=#11121D
     bindsym $mod+Control+e exec wlogout
     bindsym $mod+Shift+x exec swaylock -f -c 000000
     bindsym $mod+Shift+c kill
@@ -315,25 +315,31 @@
 #----------------------#
 bindsym $mod+r mode "resize"
 mode "resize" {
-    # Ditto, with Vim keys
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
     bindsym $left resize shrink width 10px
-    bindsym $up resize grow height 10px
-    bindsym $down resize shrink height 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
     bindsym $right resize grow width 10px
+
     # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
-    bindsym Up resize grow height 10px
-    bindsym Down resize shrink height 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
     bindsym Right resize grow width 10px
+
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
-    }
+    bindsym $mod+r mode "default"
+}
 
     # Better to resize window
     bindsym $mod+Ctrl+h             resize shrink width  5 px or 5 ppt
-    bindsym $mod+Ctrl+k             resize grow   height 5 px or 5 ppt
-    bindsym $mod+Ctrl+j             resize shrink height 5 px or 5 ppt
+    bindsym $mod+Ctrl+j             resize grow   height 5 px or 5 ppt
+    bindsym $mod+Ctrl+k             resize shrink height 5 px or 5 ppt
     bindsym $mod+Ctrl+l             resize grow   width  5 px or 5 ppt
     bindsym $mod+Ctrl+Left          resize shrink width  5 px or 5 ppt
     bindsym $mod+Ctrl+Up            resize grow   height 5 px or 5 ppt
