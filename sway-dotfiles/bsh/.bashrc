@@ -15,13 +15,19 @@ CYAN="\e[1;36m"
 NC='\033[0m'
 export PS1="${CYAN}[\W]${GREEN} ❱❱❱${NC} "
 ###------------- FZF -----------###
-export FZF_DEFAULT_COMMAND='fd --type f --color=never'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND='fd --type d . --color=never'
+source /usr/share/fzf/key-bindings.bash
+export FZF_CTRL_T_COMMAND='fd --type f --color=never'
+export FZF_ALT_C_COMMAND='fd --type d --color=never'
 export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=bg+:#313244,bg:#11121D,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--border"
+
+# Fzf ALT_C Always Run in Home
+cd_with_fzf() {
+    cd $HOME && cd "$(fd -t d | fzf --preview="exa --long --tree --level=2 {}" --bind="space:toggle-preview" --preview-window=:hidden)"
+}
 ###------------ ALIASES -----------###
 ## navigation
 alias ..='cd ..'

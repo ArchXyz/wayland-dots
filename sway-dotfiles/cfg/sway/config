@@ -282,10 +282,10 @@
     bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+p focus parent
+    bindsym $mod+a focus parent
 
     # Move focus the child container
-    bindsym $mod+c focus child
+    bindsym $mod+o focus child
 
 #-------------------------------------------------#
 # Control volume,monitor brightness,media players #
