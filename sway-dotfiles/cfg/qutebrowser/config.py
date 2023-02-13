@@ -58,7 +58,7 @@ c.downloads.remove_finished = 5000
 c.scrolling.smooth=True
 c.completion.height=200
 c.confirm_quit=["multiple-tabs", "downloads"]
-config.set("zoom.default", "90%")
+# config.set("zoom.default", "90%")
 
 ##################################################
 ############      ColorScheme     ################
