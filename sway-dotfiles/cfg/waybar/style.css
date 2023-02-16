@@ -40,14 +40,24 @@ window#waybar.hidden {
   background-clip: padding-box;
 }
 
-#workspaces button {
-  padding: 0 5px;
-  min-width: 20px;
+#workspaces {
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#workspaces button.persistent{
   color: #61afef;
 }
 
+#workspaces button {
+  padding: 0 5px;
+  min-width: 20px;
+  color: #cba6f7
+}
+
 #workspaces button:hover {
-  background-color: rgba(0, 0, 0, 0.2)
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 #workspaces button.focused {

@@ -56,8 +56,8 @@
 # Program Opacity #
 #-----------------#
     for_window [app_id="foot"]                    opacity 0.95
+    for_window [app_id="termfloat"]               opacity 0.95
     for_window [app_id="telegram"]                opacity 0.95
-    for_window [app_id="termfloat"]               opacity 0.98
 
 #---------------------#
 # Focus follows mouse #
@@ -101,7 +101,7 @@
            dwt enabled
            tap enabled
            middle_emulation enabled
-           pointer_accel 1.0
+           pointer_accel 0.4
        }
 	# Hide mouse cursor after a period of inactivity.
     seat seat0 hide_cursor 3000
@@ -126,7 +126,7 @@
     # You can get the names of your outputs by running: swaymsg -t get_outputs
     # exec_always --no-startup-id swaybg -i ~/.config/sway/wallpaper/02.png
     #output "*" bg ~/.config/sway/Background/wall5.png fill
-    output * bg ~/pix/wall/fav.jpg fill
+    output * bg ~/pix/wall/myGirl.jpg fill
 
 #-----------------------------#
 #           Misc              #
@@ -148,7 +148,7 @@
 #----------------------------------------#
 # window colours: border background text #
 #----------------------------------------#
-    client.focused          #f38ba8 #f38ba8 #11121D
+    client.focused          #89b4fa #89b4fa #11121D
     client.unfocused        #2e3440 #1f222d #888888
     client.focused_inactive #2e3440 #1f222d #888888
     client.placeholder      #2e3440 #1f222d #888888
