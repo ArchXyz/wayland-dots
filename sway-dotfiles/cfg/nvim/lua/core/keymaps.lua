@@ -60,4 +60,5 @@ keymap("n", "<leader>s", ":w!<CR>", opts)
 -- NvimTree
 keymap('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 
-keymap('n', '<leader>f', "<cmd>lua require('fzf-lua').files()<CR>", opts)
+-- Fuzzy Finder Fzf
+keymap('n', '<leader>f', "<cmd>lua require'fzf-lua'.files({ cmd = 'fd --type f --exclude node_modules' })<CR>", opts)

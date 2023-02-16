@@ -5,7 +5,6 @@
     "modules-left": ["custom/launcher", "sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray", "custom/power"],
-
     // Modules configuration
      "sway/workspaces": {
          "disable-scroll": false,
@@ -25,7 +24,7 @@
              "urgent": " ",
              "focused": " ",
              "default": " "
-         }
+         },
      },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"

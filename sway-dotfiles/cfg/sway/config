@@ -132,7 +132,7 @@
 #           Misc              #
 #-----------------------------#
     #border
-    default_border pixel 2
+    default_border pixel 1
     default_floating_border pixel 3
 
     #Gaps
@@ -148,7 +148,7 @@
 #----------------------------------------#
 # window colours: border background text #
 #----------------------------------------#
-    client.focused          #ffc0cb #ffc0cb #ffffff
+    client.focused          #f38ba8 #f38ba8 #11121D
     client.unfocused        #2e3440 #1f222d #888888
     client.focused_inactive #2e3440 #1f222d #888888
     client.placeholder      #2e3440 #1f222d #888888
@@ -310,6 +310,24 @@
     bindsym $mod+minus move scratchpad
     bindsym $mod+equal scratchpad show
 
+#------------#
+# exit mode: #
+#------------#
+set $exit "exit: [s]leep, [p]oweroff, [r]eboot, [l]ogout"
+mode $exit {
+    bindsym --to-code {
+        s exec systemctl suspend, mode "default"
+        p exec systemctl poweroff
+        r exec systemctl reboot
+        l exec swaymsg exit
+
+        Return mode "default"
+        Escape mode "default"
+        $mod+Control+p mode "default"
+    }
+}
+bindsym --to-code $mod+Control+p mode $exit
+
 #----------------------#
 # Resizing containers: #
 #----------------------#
@@ -345,24 +363,6 @@ mode "resize" {
     bindsym $mod+Ctrl+Up            resize grow   height 5 px or 5 ppt
     bindsym $mod+Ctrl+Down          resize shrink height 5 px or 5 ppt
     bindsym $mod+Ctrl+Right         resize grow   width  5 px or 5 ppt
-
-#------------#
-# exit mode: #
-#------------#
-set $exit "exit: [s]leep, [p]oweroff, [r]eboot, [l]ogout"
-mode $exit {
-    bindsym --to-code {
-        s exec systemctl suspend, mode "default"
-        p exec systemctl poweroff
-        r exec systemctl reboot
-        l exec swaymsg exit
-
-        Return mode "default"
-        Escape mode "default"
-        $mod+Control+p mode "default"
-    }
-}
-bindsym --to-code $mod+Control+p mode $exit
 
 #------------
 #-- Panel: --
