@@ -1,9 +1,9 @@
 # Coustom
-font=JetBrains Mono Nerd Font 10
+font=JetBrains Mono Nerd Font 12
 anchor=top-center
 sort=-time
 layer=overlay
-width=300
+width=350
 height=500
 padding=10
 icons=1

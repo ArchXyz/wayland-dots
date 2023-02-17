@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 sudo pacman -S --needed --noconfirm wayland xorg-xwayland sway swaybg swaylock swayidle waybar \
-	foot fuzzel grim slurp mako \
+	foot fuzzel grim slurp swappy mako \
 	firefox qutebrowser \
 	nemo mpv imv \
 	arc-gtk-theme papirus-icon-theme \

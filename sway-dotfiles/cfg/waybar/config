@@ -1,5 +1,5 @@
 {
-    "height": 37,
+    "height": 10,
     "spacing": 4,
     "position": "top",
     "modules-left": ["custom/launcher", "sway/workspaces", "sway/mode"],
@@ -111,15 +111,15 @@
         "on-click": "foot sh -c 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
         "signal": 8
     },
-"custom/power": {
-      "format": "  {}",
-      "on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Shutdown'  'shutdown -h now' -b 'Restart' 'shutdown -r now' -b 'Logout' 'swaymsg exit' -b 'Swaylock' 'swaylock -c 11121D' --background=#11121D --text=#f38ba8   --button-background=#f38ba8 --button-border=#11121D --border-bottom=#11121D --font='jetBrains Mono Nerd Font'"
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-    },
+    "custom/power": {
+          "format": "  {}",
+          "on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Shutdown'  'shutdown -h now' -b 'Restart' 'shutdown -r now' -b 'Logout' 'swaymsg exit' -b 'Swaylock' 'swaylock -c 11121D' --background=#11121D --text=#f38ba8   --button-background=#f38ba8 --button-border=#11121D --border-bottom=#11121D --font='jetBrains Mono Nerd Font'"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+        },
 },

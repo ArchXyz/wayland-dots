@@ -1,3 +1,4 @@
+/*  All Selector */
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +9,7 @@
   font-style:Italic;
 }
 
+/* Waybar Css */
 window#waybar {
   background-color: #11121D;
   border-bottom: 3px solid #1e222a;
@@ -15,11 +17,11 @@ window#waybar {
   transition-property: background-color;
   transition-duration: .5s;
 }
-
 window#waybar.hidden {
   opacity: 0.2;
 }
 
+/* Group All Modules */
 #workspaces,
 #mode,
 #clock,
@@ -33,92 +35,92 @@ window#waybar.hidden {
 #custom-power,
 #tray {
   background-color: #1e1e2e;
-  padding: 0 10px;
+  padding: 0 15px;
   margin: 2px 4px 5px 4px;
   border: 3px solid rgba(0, 0, 0, 0);
   border-radius: 90px;
   background-clip: padding-box;
 }
 
+
+/* Workspaces Sway */
 #workspaces {
     margin-left: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
 #workspaces button.persistent{
   color: #61afef;
 }
-
 #workspaces button {
   padding: 0 5px;
   min-width: 20px;
+  min-height: 30px;
   color: #cba6f7
 }
-
 #workspaces button:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-
 #workspaces button.focused {
   color: #c678dd;
 }
-
 #workspaces button.urgent {
   color: #e06c75;
 }
+
+/* Mode Sway */
 #mode{
   background-color:#f38ba8;
   color:#11111b;
 }
 
-
+/* Style Clock */
 #clock {
   color: #89b4fa;
 }
 
+/* idle Managemnet swayidle */
 #idle_inhibitor {
   color: #abb2bf;
 }
-
 #idle_inhibitor.activated {
   background-color: #abb2bf;
   color: #1e222a;
 }
 
+/* Calvie Language */
 #language {
   color: #cba6f7;
 }
 
+/* Style Audio */
 #pulseaudio {
   color: #fab387;
 }
-
 #pulseaudio.muted {
   background-color: #e06c75;
   color: #1e222a;
 }
 
+/* Style Light */
 #backlight {
   color: #94e2d5;
 }
 
+/* Style battery */
 #battery {
   color: #98c379;
 }
-
 #battery.charging, #battery.plugged {
   background-color: #98c379;
   color: #1e222a;
 }
-
 @keyframes blink {
     to {
         background-color: #1e222a;
         color: #e06c75;
     }
 }
-
 #battery.critical:not(.charging) {
     background-color: #e06c75;
     color: #1e222a;
@@ -129,11 +131,11 @@ window#waybar.hidden {
     animation-direction: alternate;
 }
 
+/* Style Coustom Module */
 #custom-launcher {
 	font-size: 20px;
   color: #89DCEB;
 }
-
 #custom-pacman {
   color: #f9e2af
 }
