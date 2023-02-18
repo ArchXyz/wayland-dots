@@ -35,6 +35,11 @@
     -b 11121Dff -t d8dee9ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m b48eadff \
     --show-actions --terminal=foot --icon-theme=Papirus -f "JetBrains Mono Nerd Font:weight=Bold:size=10"
 
+#--------------------#
+# Floating modifier: #
+#--------------------#
+    floating_modifier $mod normal
+
 #------------------------------#
 # Always float certain windows #
 #------------------------------#
@@ -183,8 +188,6 @@
     && notify-send "  Screenshot" "See in $HOME/pix/screen"
     bindsym Control+Print exec grim -g "$(slurp)" - | swappy -f -
 
-    # Floating modifier:
-    floating_modifier $mod normal
 
 #-------------------------------------------#
 # switch between current and last workspace #
