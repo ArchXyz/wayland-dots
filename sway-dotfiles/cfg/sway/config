@@ -44,6 +44,9 @@
 # Always float certain windows #
 #------------------------------#
 #swaymsg -t get_tree | grep app_id
+    for_window [app_id="pavucontrol"]            floating enable
+    for_window [app_id="pavucontrol"]            resize set height 540
+    for_window [app_id="pavucontrol"]            resize set width 960
     for_window [app_id="termfloat"]              floating enable
     for_window [app_id="termfloat"]              resize set height 540
     for_window [app_id="termfloat"]              resize set width 960
@@ -60,9 +63,10 @@
 #-----------------#
 # Program Opacity #
 #-----------------#
-    for_window [app_id="foot"]                    opacity 0.95
-    for_window [app_id="termfloat"]               opacity 0.95
+    for_window [app_id="pavucontrol"]             opacity 0.95
     for_window [app_id="telegram"]                opacity 0.95
+    for_window [app_id="termfloat"]               opacity 0.95
+    for_window [app_id="foot"]                    opacity 0.95
 
 #---------------------#
 # Focus follows mouse #
@@ -368,9 +372,9 @@ mode "resize" {
     bindsym $mod+Ctrl+Down          resize shrink height 5 px or 5 ppt
     bindsym $mod+Ctrl+Right         resize grow   width  5 px or 5 ppt
 
-#------------
-#-- Panel: --
-#------------
+#------------#
+#-- Panel: --#
+#------------#
     # Waybar:
     bar {
         swaybar_command waybar

@@ -96,7 +96,7 @@
         "tooltip-format": "{desc}, {volume}%",
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-        "on-click-middle": "foot sh -c pulsemixer"
+        "on-click-middle": "pavucontrol"
     },
     "custom/launcher":{
         "format": " ",

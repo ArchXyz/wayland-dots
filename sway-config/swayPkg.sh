@@ -11,5 +11,5 @@ sudo pacman -S --needed --noconfirm wayland xorg-xwayland sway swaybg swaylock s
 	unrar unzip zip \
 	network-manager-applet \
 	bluez bluez-utils blueman \
-	pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber alsa-utils pulsemixer \
+	pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber alsa-utils pavucontrol \
 	xf86-video-intel xdg-user-dirs pacman-contrib neofetch
